@@ -68,8 +68,10 @@ const changeStatus = (index) =>{
 <template>
 
     <!-- <h4>{{ message }}</h4> -->
+     
     
     <div>
+        <h2>thisi si view repository</h2>
         <h1>My Todo List App</h1>
 
         <input v-model="task" type="text">

@@ -21,7 +21,7 @@ const todoList = ref([{
     
 ]);
 
-const submitTask = ()=>{
+const submitTask = ()=>  { 
 
 //    console.log(task.value);
 
@@ -44,7 +44,7 @@ else{
 
 
 
-const deleteTask = (index) =>{
+const deleteTask = (index) => {
 
     todoList.value.splice(index, 1);
 }
@@ -55,7 +55,7 @@ const EditTask = (index)=>{
     editedTask.value = index;
 }
 
-const changeStatus = (index) =>{
+const changeStatus = (index) => {
 
     let currentStatus = availableStatus.value.indexOf(todoList.value[index].status);
     if(++currentStatus > 2) currentStatus =0;
@@ -71,7 +71,7 @@ const changeStatus = (index) =>{
      
     
     <div>
-        <h2>this is new testing </h2>
+        <!-- <h2>this is new testing </h2> -->
         <h1>My Todo List App</h1>
 
         <input v-model="task" type="text">

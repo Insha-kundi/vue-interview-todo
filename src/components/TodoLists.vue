@@ -71,7 +71,7 @@ const changeStatus = (index) =>{
      
     
     <div>
-        <h2>this</h2>
+        <h2>this is new testing </h2>
         <h1>My Todo List App</h1>
 
         <input v-model="task" type="text">

@@ -135,9 +135,9 @@ const confirmDelete = (index) => {
                 <tr>
                     <th>Task</th>
                     <th>Status</th>
+                    <th>Date</th>
                     <th>Edit</th>
-                    <th>Delete</th>
-                    <th>Date </th>
+                    <th>Delete </th>
 
 
                 </tr>

@@ -15,7 +15,7 @@ const task = ref('');
  const editedTask = ref(null);
 
 //  status update  simple array
- const availableStatus = ref(['Todo', 'Completed', 'Pending']);
+ const availableStatus = ref(['Todo', 'Pending', 'Completed']);
  
 // array object for task adding 
 const todoList = ref([{
@@ -99,6 +99,35 @@ const confirmDelete = (index) => {
     };
 
 
+    const statusTextStyle = (status) =>{
+
+      const styles = {
+        Completed: {
+
+          color: '#28a745',
+          fontWeight: '600',
+          textDecoration: 'line-through',
+        },
+
+        Pending: {
+
+color: '#fd7e14',
+fontWeight: '600',
+},
+
+
+Todo: {
+
+color: 'black',
+fontWeight: '600',
+},
+
+      };
+
+      return styles[status] || styles.Todo;
+
+    }
+
 // task status changing function 
 
 // const changeStatus = (index) => {
@@ -148,7 +177,7 @@ const confirmDelete = (index) => {
             <!-- added task to the table using for loop -->
 
             <tr v-for="(task, index) in todoList" :key="index" >
-                <td style="width: 400px;"> <span style="width: 80px;">
+                <td style="width: 400px;" :style="statusTextStyle(task.status)" > <span style="width: 80px;">
                     {{ task.name }}
                 </span> </td>
 

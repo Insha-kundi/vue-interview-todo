@@ -118,7 +118,7 @@ const confirmDelete = (index) => {
     
     <div>
 
-      <h3>this i snew sab</h3>
+
 
 
         <h1>My Todo List App</h1>
